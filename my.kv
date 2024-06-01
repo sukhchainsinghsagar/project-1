@@ -1,0 +1,100 @@
+
+<Homepage>:
+    orientation: 'vertical'
+    BoxLayout:
+        padding: 5
+    Image:
+        source: 'home_logo.jpg'  
+        size_hint_x: 0.1
+        size_hint_y: 1.9
+        allow_stretch: True
+    BoxLayout:
+        
+        orientation: 'horizontal'
+        Label:
+            text: 'GURU SIKHI'
+            font_size: 50
+            size_hint_x: 0.8
+            size_hint_y: 1.9
+            bold: True
+            allow_stretch: True
+            color: (41, 97, 166)
+    
+        Button:
+            background_normal:'home_icon_png.png'
+            pos_hint: {'top':1,'left':1}
+            size_hint_x: 0.2
+            size_hint_y: 0.1
+            allow_stretch: True
+    BoxLayout:
+        orientation: 'horizontal'
+        size: root.width, root.height
+        Label:
+            text: '___________________________________________________ '
+            # size_hint_x: 1
+            # size_hint_y: 1
+            pos_hint: {'center_x':0.4,'center_y':0.9}
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: 'Japji Sahib'
+            size_hint_x: 0.2
+            size_hint_y: 0.1
+            pos_hint: {'center_x':0.4,'center_y':0.8}
+            on_press: root.manager.current = 'japji'
+           
+<JapjiSahib>
+    Button:
+        text: "back to home "
+        
+        font_size: 12
+        bold: True
+        size_hint_x: 0.2
+        size_hint_y: 0.1
+        pos_hint: {'top':1,'left':1}
+        on_press: 
+            root.manager.current = 'home'
+        border: (1,1,1,1)
+    Image:
+        source: 'home_icon_png.png'
+        pos_hint: {'top':1,'right':1}
+        size_hint_x: 0.2
+        size_hint_y: 0.1
+        allow_stretch: True
+        
+    BoxLayout:
+        orientation: 'vertical'
+        # size: root.width, root.height
+        
+                            
+
+    GridLayout:
+        size: root.width, root.height
+        cols: 1
+        padding: 0,100,0,0
+        spacing: 10
+        height: self.minimum_height
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+             
+            Label:
+                canvas.before:
+                    Color: 
+                        rgba: (0.3, 2, 0.8, 0.3)
+                    RoundedRectangle: 
+                        pos: self.pos
+                        size: self.size
+                        radius: [40]
+                size_hint_y: None
+                height: self.texture_size[1]
+                text_size: self.width, None
+                padding: 50
+                font_size: '20sp'
+                
+                text:'''ik-oNkaar sat naam kartaa purakh nirbha-o nirvair\n akaal moorat ajoonee saibhaN gur parsaad. \njap.\naad sach jugaad sach. \nhai bhee sach naanak hosee bhee sach. \n ||1||\nsochai soch na hova-ee jay sochee lakh vaar.\nchupai chup na hova-ee jay laa-ay rahaa liv taar. \nbhukhi-aa bhukh na utree jay bannaa puree-aa bhaar. \nsahas si-aanpaa lakh hohi ta ik na chalai naal. \nkiv sachi-aaraa ho-ee-ai kiv koorhai tutai paal. \nhukam rajaa-ee chalnaa naanak likhi-aa naal. ||1||\nhukmee hovan aakaar hukam na kahi-aa jaa-ee.\nhukmee hovan jee-a hukam milai vadi-aa-ee. \nhukmee utam neech hukam likh dukh sukh paa-ee-ah. \niknaa hukmee bakhsees ik hukmee sadaa bhavaa-ee-ah. \nhukmai andar sabh ko baahar hukam na ko-ay. \nnaanak hukmai jay bujhai ta ha-umai kahai na ko-ay. ||2||\ngaavai ko taan hovai kisai taan.\ngaavai ko daat jaanai neesaan. \ngaavai ko gun vadi-aa-ee-aa chaar. \ngaavai ko vidi-aa vikham veechaar.\ngaavai ko saaj karay tan khayh. \ngaavai ko jee-a lai fir dayh.\ngaavai ko jaapai disai door. \ngaavai ko vaykhai haadraa hadoor. \nkathnaa kathee na aavai tot. \nkath kath kathee kotee kot kot. \ndaydaa day laiday thak paahi.\njugaa jugantar khaahee khaahi. \nhukmee hukam chalaa-ay raahu.\nnaanak vigsai vayparvaahu. ||3||\nsaachaa saahib saach naa-ay bhaakhi-aa bhaa-o apaar. \naakhahi mangahi dahi dahi daat karay daataar. \nfayr ke agai rakhee-ai jit disai darbaar. \nmuhou ke bolan bolee-ai jit sun Dharay pi-aar. \namrit vaylaa sach naa-o vadi-aa-ee veechaar. \nkarmee aavai kaprhaa nadree mokh du-aar. \nnaanak ayvai jaanee-ai sabh aapay sachiaar. ||4||\nthaapi-aa na jaa-ay keetaa na ho-ay. \naapay aap niranjan so-ay. \njin sayvi-aa tin paa-i-aa maan.\nnaanak gaavee-ai gunee niDhaan. \ngaavee-ai sunee-ai man rakhee-ai bhaa-o. \ndukh parhar sukh ghar lai jaa-ay. \ngurmukh naadaN gurmukh vaydaN gurmukh rahi-aa samaa-ee. \ngur eesar gur gorakh barmaa gur paarbatee maa-ee. \njay ha-o jaanaa aakhaa naahee kahnaa kathan na jaa-ee. \nguraa ik dahi bujhaa-ee. \nsabhnaa jee-aa kaa ik daataa so mai visar na jaa-ee. ||5||'''
+                # text_size: self.size
+                # padding: 50
+                # pos_hint: {'center_x':0.5}
+                    # valign: "top"
+                    # halign: "left"
